@@ -13,5 +13,10 @@ Documentation Link -> [It Bookstore API](https://api.itbook.store/)
 
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
+## Resources & Credits
 
+Tailwind Components -> [Kitwind](https://kitwind.io/products/kometa/components)
 
+Icon -> [FlatIcon](https://www.flaticon.com/)
+
+Lottie Animation -> [LottieFiles](https://lottiefiles.com/featured)
