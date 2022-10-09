@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link, useLoaderData } from 'react-router-dom'
 
-const BookDetails = () => {
-  const bookData = {}
+const BookDetails = () => { 
+  const bookData = useLoaderData();
+  
   const { image, title, desc, authors, publisher, year, rating, pdf, price } =
     bookData
 
@@ -32,14 +34,14 @@ const BookDetails = () => {
           <p className='mb-5 text-gray-900'>Rating: {rating}</p>
           <p className='mb-5 text-gray-800'>{desc.substring(0, 150)}...</p>
           <div className='flex items-center'>
-            <a href={pdf && Object.values(pdf)[0]}>
+            <Link href={pdf && Object.values(pdf)[0]}>
               <button
                 type='submit'
                 className='inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'
               >
                 {pdf ? 'Download PDF' : 'Not Available'}
               </button>
-            </a>
+            </Link>
             <p className='inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800'>
               Price: {price}
             </p>

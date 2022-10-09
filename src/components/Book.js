@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Book = ({ book }) => {
   const { isbn13, image, title, subtitle, price } = book
   return (
-    <a href={`../book/${isbn13}`} aria-label='View Item'>
+    <Link to={`../book/${isbn13}`} aria-label='View Item'>
       <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
         <img
           className='object-cover w-full h-56 md:h-64 xl:h-80'
@@ -18,7 +19,7 @@ const Book = ({ book }) => {
           <p className='text-sm tracking-wide text-gray-300'>Price: {price}</p>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 
